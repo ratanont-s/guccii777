@@ -1,7 +1,40 @@
+main {
+    background: black url('../../assets/img/bg.png') no-repeat center center/cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    position: relative;
+}
+
 .link-img {
     &:hover {
         img {
             filter: saturate(1.5) drop-shadow(0 0 .5rem rgba(white, .5));
+        }
+    }
+}
+
+.banner {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        @include gradient-y($start-color: #E0C89D, $end-color: #89785B, $start-percent: 0%, $end-percent: 100%);
+    }
+
+    img {
+        width: 100%;
+    }
+
+    @include media-breakpoint-down(md) {
+        img {
+            min-height: 165px;
+            width: 100%;
+            object-fit: cover;
         }
     }
 }

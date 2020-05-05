@@ -1,34 +1,4 @@
 #indexPage {
-    background: black url('../../assets/img/bg.png') no-repeat center center/cover;
-    overflow-x: hidden;
-    position: relative;
-
-    .banner {
-        position: relative;
-
-        &::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            @include gradient-y($start-color: #E0C89D, $end-color: #89785B, $start-percent: 0%, $end-percent: 100%);
-        }
-
-        img {
-            width: 100%;
-        }
-
-        @include media-breakpoint-down(md) {
-            img {
-                min-height: 165px;
-                width: 100%;
-                object-fit: cover;
-            }
-        }
-    }
-
     .content1 {
         padding: 5rem 0 8rem;
         position: relative;
