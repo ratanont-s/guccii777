@@ -1,0 +1,7 @@
+.link-img {
+    &:hover {
+        img {
+            filter: saturate(1.5) drop-shadow(0 0 .5rem rgba(white, .5));
+        }
+    }
+}

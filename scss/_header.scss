@@ -1,0 +1,95 @@
+header {
+    background: black url('../img/bg-header.png') no-repeat center top/cover;
+    position: relative;
+
+    .navbar {
+        padding: 0;
+
+        &-brand {
+            padding: 0;
+        }
+
+        &-toggler {
+            padding: .5rem;
+
+            &:focus {
+                outline: none;
+            }
+
+            &[aria-expanded="true"] {
+                background-color: rgba(white, .15);
+            }
+        }
+
+        &-right {
+            h5 {
+                @include gradient-y($start-color: #C5C5C5, $end-color: #474747, $start-percent: 0%, $end-percent: 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            li,
+            a {
+                color: white;
+                font-size: 12px;
+            }
+        }
+
+        &-collapse {
+            background: url('../img/bg-navbar-collapse.png') repeat-x center center/auto 100%;
+        }
+    }
+
+    .nav {
+        &-item {
+            &.active {
+                .nav-link {
+                    background-color: rgba(black, .15);
+                    font-weight: 500;
+                }
+            }
+        }
+
+        &-link {
+            color: #302B23;
+            padding: .75rem 1rem !important;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        // &::before {
+        //     content: '';
+        //     position: absolute;
+        //     bottom: calc(-190px / 2);
+        //     right: 0;
+        //     width: 694px;
+        //     height: 190px;
+        //     background: url('../img/light-navbar.png') no-repeat center center/contain;
+        //     z-index: 2;
+        //     mix-blend-mode: screen;
+        // }
+
+        .navbar {
+            flex-direction: column;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .navbar {
+            padding-left: 15px;
+            padding-right: 15px;
+
+            &-brand {
+                img {
+                    max-width: 150px;
+                }
+            }
+        }
+
+        .nav {
+            &-link {
+                text-align: center;
+            }
+        }
+    }
+}

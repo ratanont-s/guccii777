@@ -1,0 +1,17 @@
+footer {
+    background-color: black;
+    font-size: 13px;
+    font-weight: 300;
+    padding: 2.5rem 0;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        @include gradient-y($start-color: #E0C89D, $end-color: #89785B, $start-percent: 0%, $end-percent: 100%);
+    }
+}
