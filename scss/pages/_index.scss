@@ -1,13 +1,17 @@
 #indexPage {
     .content1 {
-        padding: 5rem 0 8rem;
         position: relative;
         z-index: 2;
+
+        >.container {
+            position: relative;
+            padding: 5rem 15px 8rem;
+        }
 
         .snak {
             position: absolute;
             top: 0;
-            right: 15%;
+            right: 0;
             height: 120%;
         }
 
@@ -47,6 +51,14 @@
 
         p {
             font-size: 14px;
+        }
+
+        @include media-breakpoint-down(md) {
+            .snak {
+                filter: brightness(.5);
+                right: -15%;
+                height: 100%;
+            }
         }
     }
 
@@ -96,6 +108,18 @@
 
         p {
             font-size: 14px;
+        }
+
+        @include media-breakpoint-down(md) {
+            padding: 6rem 0;
+
+            .cube {
+                transform: scale(.5);
+            }
+
+            .logo {
+                width: 250px;
+            }
         }
     }
 
