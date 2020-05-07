@@ -13,6 +13,7 @@
             top: 0;
             right: 0;
             height: 120%;
+            z-index: -1;
         }
 
 
@@ -46,6 +47,10 @@
                 width: 120%;
                 height: 120%;
                 background: url('../../assets/img/light-btn.png') no-repeat center center/contain;
+            }
+
+            &:hover {
+                filter: saturate(1.5) drop-shadow(0 0 .5rem rgba(white, .5));
             }
         }
 
